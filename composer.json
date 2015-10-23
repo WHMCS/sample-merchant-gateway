@@ -1,0 +1,26 @@
+{
+    "name": "whmcs/sample-merchant-gateway",
+    "description": "Sample Merchant Gateway Module for the WHMCS Billing Automation Platform",
+    "keywords": [
+        "whmcs",
+        "web host automation platform",
+        "merchant gateway module",
+        "gateway module",
+        "3d secure"
+    ],
+    "homepage": "http://www.whmcs.com/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WHMCS Development Team",
+            "email": "development@whmcs.com",
+            "homepage": "http://www.whmcs.com/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "support@whmcs.com",
+        "forum": "http://forums.whmcs.com/",
+        "wiki": "http://docs.whmcs.com/"
+    }
+}
