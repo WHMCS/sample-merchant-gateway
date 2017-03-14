@@ -204,7 +204,7 @@ function merchantgateway_3dsecure($params)
         'card_holder_state' => $state,
         'card_holder_zip' => $postcode,
         'card_holder_country' => $country,
-        'return_url' => $systemUrl . '/modules/gateways/callback/' . $moduleName . '.php';
+        'return_url' => $systemUrl . '/modules/gateways/callback/' . $moduleName . '.php',
     );
 
     $htmlOutput = '<form method="post" action="' . $url . '">';
