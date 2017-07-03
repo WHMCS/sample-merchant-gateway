@@ -15,9 +15,9 @@
  *
  * For more information, please refer to the online documentation.
  *
- * @see http://docs.whmcs.com/Gateway_Module_Developer_Docs
+ * @see https://developers.whmcs.com/payment-gateways/
  *
- * @copyright Copyright (c) WHMCS Limited 2015
+ * @copyright Copyright (c) WHMCS Limited 2017
  * @license http://www.whmcs.com/license/ WHMCS Eula
  */
 
@@ -31,7 +31,7 @@ if (!defined("WHMCS")) {
  * Values returned here are used to determine module related capabilities and
  * settings.
  *
- * @see http://docs.whmcs.com/Gateway_Module_Meta_Data_Parameters
+ * @see https://developers.whmcs.com/payment-gateways/meta-data-params/
  *
  * @return array
  */
@@ -62,6 +62,8 @@ function merchantgateway_MetaData()
  *
  * Examples of each field type and their possible configuration parameters are
  * provided in the sample function below.
+ *
+ * @see https://developers.whmcs.com/payment-gateways/configuration/
  *
  * @return array
  */
@@ -135,7 +137,7 @@ function merchantgateway_config()
  *
  * @param array $params Payment Gateway Module Parameters
  *
- * @see http://docs.whmcs.com/Payment_Gateway_Module_Parameters
+ * @see https://developers.whmcs.com/payment-gateways/3d-secure/
  *
  * @return string 3D Secure Form
  */
@@ -227,7 +229,7 @@ function merchantgateway_3dsecure($params)
  *
  * @param array $params Payment Gateway Module Parameters
  *
- * @see http://docs.whmcs.com/Payment_Gateway_Module_Parameters
+ * @see https://developers.whmcs.com/payment-gateways/merchant-gateway/
  *
  * @return array Transaction response status
  */
@@ -298,7 +300,7 @@ function merchantgateway_capture($params)
  *
  * @param array $params Payment Gateway Module Parameters
  *
- * @see http://docs.whmcs.com/Payment_Gateway_Module_Parameters
+ * @see https://developers.whmcs.com/payment-gateways/refunds/
  *
  * @return array Transaction response status
  */
