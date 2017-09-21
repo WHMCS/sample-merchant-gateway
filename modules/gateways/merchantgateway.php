@@ -211,7 +211,7 @@ function merchantgateway_3dsecure($params)
 
     $htmlOutput = '<form method="post" action="' . $url . '">';
     foreach ($postfields as $k => $v) {
-        $htmlOutput = '<input type="hidden" name="' . $k . '" value="' . urlencode($v) . '" />';
+        $htmlOutput .= '<input type="hidden" name="' . $k . '" value="' . urlencode($v) . '" />';
     }
     $htmlOutput .= '<input type="submit" value="' . $langPayNow . '" />';
     $htmlOutput .= '</form>';
