@@ -40,7 +40,7 @@ function merchantgateway_MetaData()
     return array(
         'DisplayName' => 'Sample Merchant Gateway Module',
         'APIVersion' => '1.1', // Use API Version 1.1
-        'DisableLocalCredtCardInput' => false,
+        'DisableLocalCreditCardInput' => false,
         'TokenisedStorage' => false,
     );
 }
