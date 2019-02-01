@@ -288,7 +288,7 @@ function merchantgateway_capture($params)
         // Unique Transaction ID for the capture transaction
         'transid' => $transactionId,
         // Optional fee amount for the fee value refunded
-        'fees' => $feeAmount,
+        'fee' => $feeAmount,
     );
 }
 
@@ -349,6 +349,6 @@ function merchantgateway_refund($params)
         // Unique Transaction ID for the refund transaction
         'transid' => $refundTransactionId,
         // Optional fee amount for the fee value refunded
-        'fees' => $feeAmount,
+        'fee' => $feeAmount,
     );
 }
