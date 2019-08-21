@@ -16,14 +16,14 @@
  *
  * @see https://developers.whmcs.com/payment-gateways/callbacks/
  *
- * @copyright Copyright (c) WHMCS Limited 2017
+ * @copyright Copyright (c) WHMCS Limited 2019
  * @license http://www.whmcs.com/license/ WHMCS Eula
  */
 
 // Require libraries needed for gateway module functions.
 require_once __DIR__ . '/../../../init.php';
-$whmcs->load_function('gateway');
-$whmcs->load_function('invoice');
+App::load_function('gateway');
+App::load_function('invoice');
 
 // Detect module name from filename.
 $gatewayModuleName = basename(__FILE__, '.php');
