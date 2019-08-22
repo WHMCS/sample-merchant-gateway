@@ -17,7 +17,7 @@
  *
  * @see https://developers.whmcs.com/payment-gateways/
  *
- * @copyright Copyright (c) WHMCS Limited 2017
+ * @copyright Copyright (c) WHMCS Limited 2019
  * @license http://www.whmcs.com/license/ WHMCS Eula
  */
 
@@ -40,8 +40,6 @@ function merchantgateway_MetaData()
     return array(
         'DisplayName' => 'Sample Merchant Gateway Module',
         'APIVersion' => '1.1', // Use API Version 1.1
-        'DisableLocalCreditCardInput' => false,
-        'TokenisedStorage' => false,
     );
 }
 
@@ -280,16 +278,29 @@ function merchantgateway_capture($params)
 
     // perform API call to capture payment and interpret result
 
-    return array(
-        // 'success' if successful, otherwise 'declined', 'error' for failure
-        'status' => 'success',
-        // Data to be recorded in the gateway log - can be a string or array
-        'rawdata' => $responseData,
-        // Unique Transaction ID for the capture transaction
-        'transid' => $transactionId,
-        // Optional fee amount for the fee value refunded
-        'fee' => $feeAmount,
-    );
+    if ($responseData->status == 1) {
+        $returnData = [
+            // 'success' if successful, otherwise 'declined', 'error' for failure
+            'status' => 'success',
+            // Data to be recorded in the gateway log - can be a string or array
+            'rawdata' => $responseData,
+            // Unique Transaction ID for the capture transaction
+            'transid' => $transactionId,
+            // Optional fee amount for the fee value refunded
+            'fee' => $feeAmount,
+        ];
+    } else {
+        $returnData = [
+            // 'success' if successful, otherwise 'declined', 'error' for failure
+            'status' => 'declined',
+            // When not successful, a specific decline reason can be logged in the Transaction History
+            'declinereason' => 'Credit card declined. Please contact issuer.',
+            // Data to be recorded in the gateway log - can be a string or array
+            'rawdata' => $responseData,
+        ];
+    }
+
+    return $returnData;
 }
 
 
