@@ -1,0 +1,33 @@
+{
+    "schema": "1.0",
+    "type": "whmcs-gateways",
+    "name": "sample-merchant-gateway",
+    "license": "MIT",
+    "category": "gateway",
+    "description": {
+        "name": "Sample Merchant Gateway Module",
+        "tagline": "Payment Gateway modules allow you to integrate payment solutions with the WHMCS platform.",
+        "long": "The sample files here demonstrate how we suggest a Merchant Payment Gateway module for WHMCS be structured and implemented.",
+        "features": [
+            "Provide structure for 3D Secure Authentication",
+            "Provide structure for payment capture",
+            "Provide structure for payment refund"
+        ]
+    },
+    "logo": {
+        "filename": "logo.png"
+    },
+    "support": {
+        "homepage": "https:\/\/www.whmcs.com\/", 
+        "learn_more": "https:\/\/www.whmcs.com\/tour", 
+        "email": "support@whmcs.com", 
+        "support_url": "https:\/\/support.whmcs.com\/",
+        "docs_url": "https:\/\/developers.whmcs.com\/payment-gateways\/"
+    },
+    "authors": [
+        {
+            "name": "WHMCS",
+            "homepage": "https:\/\/www.whmcs.com\/"
+        }
+    ]
+}
